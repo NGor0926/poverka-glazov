@@ -25,6 +25,7 @@
   --цвет-тёмный-фон: #0B1E3A;  --цвет-тёмный-фон-2: #102849;  --цвет-тёмный-текст: #FFFFFF;
   --цвет-тёмный-фон-3: #0D2241;  --цвет-тёмный-фон-4: #0C203D;
   --цвет-тёплый: #49B6F2;  --цвет-тёплый-мягкий: #CDE8FB;
+  --свой-красный: #E0353B;  --свой-красный-текст: #C9252B;  /* красный ручки крана с картинки первого экрана: точки и черты · тот же темнее — для текста на белом (контраст 5,6) */
   --цвет-стекло: color-mix(in srgb, #0B1E3A 86%, transparent);
   --тень: 0 12px 34px color-mix(in srgb, #0B1E3A 6%, transparent);
   --тень-чип: 0 10px 30px color-mix(in srgb, #0B1E3A 12%, transparent);
@@ -102,7 +103,7 @@
   <span class="пятно пятно--1"></span><span class="пятно пятно--2"></span>
   <div class="блок__внутри">
     <div class="первый-экран__текст">
-      <p class="кикер"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <p class="кикер" style="--цвет-тёплый:var(--свой-красный)"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
 </svg>Глазов и Балезинский район</p>
       <h1>Подошёл срок поверки<span class="делитель"> —</span> <span class="хвост">приедем и поверим счётчик <em class="акцент">дома</em></span></h1>
@@ -118,8 +119,8 @@
 </svg> Если счётчик не проходит поверку, оплата не взимается</p>
     </div>
     <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .22">
-      <picture><source media="(max-width: 899px)" srcset="img/zaglushka-schetchiki.svg"><img src="img/zaglushka-schetchiki.svg" alt="Счётчики воды" data-лицо="50,50" fetchpriority="high"></picture>
-      <div class="чип чип--ролик парит парит--2"><span><b>Не прошёл</b> — не платите</span></div>
+      <picture><source media="(max-width: 899px)" srcset="img/schetchiki-telefon.webp"><img src="img/schetchiki.webp" alt="Два счётчика воды — холодной и горячей — на трубах в ванной" data-лицо="68,45" fetchpriority="high"></picture>
+      <div class="чип чип--ролик парит парит--2"><span><b style="color:var(--свой-красный-текст)">Не прошёл</b> — не платите</span></div>
     </figure>
   </div>
 </section>
@@ -128,7 +129,7 @@
   <div class="секция__шапка секция__шапка--центр">
     <p class="кикер">Когда пора на поверку</p>
     <h2>Когда счётчику воды пора на поверку</h2>
-    <p class="лид секция__лид">Горячую воду поверяют раз в 4 года, холодную — раз в 6 лет</p>
+    <p class="лид секция__лид"><span style="color:var(--свой-красный-текст)">Горячую</span> воду поверяют раз в 4 года, <span style="color:var(--цвет-акцент)">холодную</span> — раз в 6 лет</p>
   </div>
   <div class="ряд секция__тело">
     <div class="роль кромка--акцент"><span class="номер">1</span><b>Напомнили в квитанции</b><p>Срок подходит, а платить по нормативу не хочется</p></div>
@@ -242,7 +243,7 @@
     <li class="строка"><span class="строка__что">Один счётчик</span><span class="строка__цена"><b>600 ₽</b></span></li>
     <li class="строка"><span class="строка__что">Два счётчика</span><span class="строка__цена"><b>1 200 ₽</b></span></li>
     <li class="строка"><span class="строка__что">Три счётчика</span><span class="строка__цена"><b>1 800 ₽</b></span></li>
-    <li class="строка"><span class="строка__что">Четыре счётчика</span><span class="строка__цена"><b>2 300 ₽</b><span>вместо 2 400 ₽</span></span></li>
+    <li class="строка"><span class="строка__что">Четыре счётчика</span><span class="строка__цена"><b style="color:var(--свой-красный-текст)">2 300 ₽</b><span>вместо 2 400 ₽</span></span></li>
   </ul>
   <div class="действие"><a class="кнопка кнопка--главная" href="tel:+79124417404">Позвонить</a></div>
 </div>
