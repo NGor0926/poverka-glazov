@@ -1711,3 +1711,122 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-03 .значок { width: 52px; height: 52px; }
     #экран-03 .итог { margin-top: 32px; padding-top: 26px; }
   }
+
+/* экран 04 */
+#экран-04 .шаги { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin: 52px 0 0; padding: 0; list-style: none; text-align: center; }
+  #экран-04 .шаги::before { content: ""; position: absolute; top: 32px; left: 12.5%; right: 12.5%; height: var(--нить); }
+  #экран-04.светлый .шаги::before { background: var(--цвет-линия); }
+  #экран-04.тёмный .шаги::before { background: color-mix(in srgb, var(--цвет-тёмный-текст) 18%, transparent); }
+  #экран-04 .этап { position: relative; display: grid; justify-items: center; align-content: start; gap: 10px; }
+  #экран-04 .этап__номер { display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 8px; border-radius: 50%; font-size: var(--кегль-лид); font-weight: 700; }
+  #экран-04.светлый .этап__номер { background: var(--цвет-фон-карточки); border: var(--нить) solid var(--цвет-акцент); color: var(--цвет-акцент); box-shadow: var(--тень); }
+  #экран-04.тёмный .этап__номер { background: var(--цвет-тёмный-фон-2); border: var(--нить) solid var(--цвет-тёплый); color: var(--цвет-тёплый); }
+  #экран-04 .этап b { font-size: var(--кегль-лид); line-height: 1.3; }
+  #экран-04 .этап .бейдж { margin: 0; }
+  #экран-04 .этап p { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-04.светлый .этап b { color: var(--цвет-текст); }
+  #экран-04.светлый .этап p { color: var(--цвет-текст-мягкий); }
+  #экран-04.тёмный .этап b { color: var(--цвет-тёмный-текст); }
+  #экран-04.тёмный .этап p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-04 .итог { display: grid; justify-items: center; gap: 12px; max-width: 640px; margin: 52px auto 0; text-align: center; }
+  #экран-04 .итог b { font-size: var(--кегль-лид); line-height: 1.4; }
+  #экран-04.светлый .итог b { color: var(--цвет-текст); }
+  #экран-04.тёмный .итог b { color: var(--цвет-тёмный-текст); }
+  @media (max-width: 899px) {
+    #экран-04 .шаги { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; text-align: left; }
+    #экран-04 .шаги::before { content: none; }
+    #экран-04 .этап { grid-template-columns: auto 1fr; justify-items: start; column-gap: 16px; row-gap: 6px; }
+    #экран-04 .этап__номер { grid-row: span 3; width: 48px; height: 48px; margin: 0; }
+    #экран-04 .итог { margin-top: 36px; }
+  }
+
+/* экран 05 */
+#экран-05 .тело { display: grid; grid-template-columns: 1.7fr 1fr; gap: 32px; align-items: start; margin-top: 48px; }
+  #экран-05 .вопрос__шапка { font-size: var(--кегль-лид); }
+  #экран-05 .вопрос-карточка { position: sticky; top: 96px; gap: 14px; padding: 32px 28px; }
+  #экран-05 .вопрос-карточка b { font-size: var(--кегль-лид); }
+  #экран-05 .вопрос-карточка .кнопка { margin-top: 6px; }
+  @media (max-width: 899px) {
+    #экран-05 .тело { grid-template-columns: 1fr; gap: 20px; margin-top: 28px; }
+    #экран-05 .вопрос-карточка { position: static; padding: 24px 20px; }
+  }
+
+/* экран 06 */
+#экран-06 .прайс { max-width: 720px; margin: 48px auto 0; padding: 12px 40px; list-style: none; border-radius: var(--радиус-плитки); }
+  #экран-06.светлый .прайс { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-06.тёмный .прайс { background: var(--цвет-тёмный-фон-2); border: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 14%, transparent); box-shadow: var(--тень-глубокая); }
+  #экран-06 .строка { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 24px 0; }
+  #экран-06 .строка + .строка { border-top: 1px solid; }
+  #экран-06.светлый .строка + .строка { border-top-color: var(--цвет-линия); }
+  #экран-06.тёмный .строка + .строка { border-top-color: color-mix(in srgb, var(--цвет-тёмный-текст) 14%, transparent); }
+  #экран-06 .строка__что { font-size: var(--кегль-лид); font-weight: 600; }
+  #экран-06 .строка__цена { display: grid; justify-items: end; gap: 2px; text-align: right; }
+  #экран-06 .строка__цена b { font-size: var(--кегль-цифра); line-height: 1.1; white-space: nowrap; }
+  #экран-06 .строка__цена span { font-size: var(--кегль-текст); }
+  #экран-06.светлый .строка__что { color: var(--цвет-текст); }
+  #экран-06.светлый .строка__цена b { color: var(--цвет-акцент); }
+  #экран-06.светлый .строка__цена span { color: var(--цвет-текст-мягкий); }
+  #экран-06.тёмный .строка__что { color: var(--цвет-тёмный-текст); }
+  #экран-06.тёмный .строка__цена b { color: var(--цвет-тёплый); }
+  #экран-06.тёмный .строка__цена span { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-06 .действие { display: flex; justify-content: center; margin-top: 40px; }
+  @media (max-width: 899px) {
+    #экран-06 .прайс { margin-top: 28px; padding: 4px 20px; }
+    #экран-06 .строка { padding: 18px 0; gap: 16px; }
+    #экран-06 .действие { margin-top: 28px; }
+  }
+
+/* экран 07 */
+#экран-07 .секция__лид { font-size: var(--кегль-лид); font-weight: 600; }
+  #экран-07.светлый .секция__лид { color: var(--цвет-акцент); }
+  #экран-07.тёмный .секция__лид { color: var(--цвет-тёплый); }
+  #экран-07 .условия { grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 44px auto 0; }
+  #экран-07 .условия li { padding: 22px 24px 22px 52px; border-radius: var(--радиус-карточки); }
+  #экран-07 .условия li::before { left: 24px; top: 22px; }
+  #экран-07 .условия b { display: block; margin-bottom: 4px; font-size: var(--кегль-текст); }
+  #экран-07.светлый .условия b { color: var(--цвет-текст); }
+  #экран-07.тёмный .условия b { color: var(--цвет-тёмный-текст); }
+  @media (max-width: 899px) {
+    #экран-07 .условия { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
+    #экран-07 .условия li { padding: 18px 18px 18px 46px; }
+    #экран-07 .условия li::before { left: 18px; top: 18px; }
+  }
+
+/* экран 08 */
+#экран-08 .финал { position: relative; z-index: 2; display: grid; justify-items: center; gap: 20px; max-width: 720px; margin: 0 auto; text-align: center; }
+  #экран-08 .финал h2 { margin: 0; }
+  #экран-08 .финал .лид { margin: 0; max-width: 560px; font-size: var(--кегль-лид); }
+  #экран-08 .действие { margin-top: 12px; }
+  #экран-08 .подпись { margin: 0; font-size: var(--кегль-текст); }
+  #экран-08 .контакты { margin: 8px 0 0; padding-top: 20px; font-size: var(--кегль-текст); }
+  #экран-08 .контакты a { font-weight: 600; text-decoration: none; }
+  #экран-08 .целиком { white-space: nowrap; }
+  #экран-08 .точка { font-style: normal; }
+  #экран-08.тёмный .подпись { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  #экран-08.тёмный .контакты { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); border-top: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 16%, transparent); }
+  #экран-08.тёмный .контакты a { color: var(--цвет-тёмный-текст); }
+  #экран-08.светлый .подпись { color: var(--цвет-текст-мягкий); }
+  #экран-08.светлый .контакты { color: var(--цвет-текст-мягкий); border-top: 1px solid var(--цвет-линия); }
+  #экран-08.светлый .контакты a { color: var(--цвет-акцент); }
+  @media (max-width: 899px) {
+    #экран-08 .финал { gap: 16px; }
+    #экран-08 .контакты span { display: block; }
+    #экран-08 .точка { display: none; }
+  }
+
+/* экран 09 */
+#экран-09 { font-size: var(--кегль-текст); }
+  #экран-09 .подвал__сетка { grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; }
+  #экран-09 .подвал__лого { font-size: var(--кегль-лид); font-weight: 700; }
+  #экран-09 .подвал__сетка p { margin: 0; line-height: 1.55; }
+  #экран-09 h4 { margin: 0 0 14px; font-size: var(--кегль-текст); }
+  #экран-09 .подвал__ссылки { gap: 10px; }
+  #экран-09 .подвал__низ { gap: 8px 24px; font-size: var(--кегль-текст); }
+  #экран-09.светлый .подвал__лого, #экран-09.светлый h4 { color: var(--цвет-текст); }
+  #экран-09.светлый .подвал__сетка p, #экран-09.светлый .подвал__низ { color: var(--цвет-текст-мягкий); }
+  #экран-09.тёмный .подвал__лого, #экран-09.тёмный h4 { color: var(--цвет-тёмный-текст); }
+  #экран-09.тёмный .подвал__сетка p, #экран-09.тёмный .подвал__низ { color: color-mix(in srgb, var(--цвет-тёмный-текст) 78%, transparent); }
+  @media (max-width: 899px) {
+    #экран-09 .подвал__сетка { grid-template-columns: 1fr; gap: 28px; }
+    #экран-09 .подвал__низ { flex-direction: column; }
+  }
