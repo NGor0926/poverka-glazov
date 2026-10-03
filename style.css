@@ -1672,3 +1672,15 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   body.панель-с-переходом .липкая-кнопка { transition: none; }
 }
+
+/* экран 02 */
+#экран-02 .ряд { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+  #экран-02 .роль { padding: 26px 24px 28px; }
+  #экран-02 .номер { display: block; font-size: var(--кегль-цифра); font-weight: 700; line-height: 1; margin-bottom: 18px; }
+  #экран-02.светлый .номер { color: var(--цвет-акцент-яркий); }
+  #экран-02.тёмный .номер { color: var(--цвет-тёплый); }
+  @media (max-width: 899px) {
+    #экран-02 .ряд { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
+    #экран-02 .роль { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; padding: 20px; }
+    #экран-02 .номер { grid-row: span 2; margin: 0; }
+  }
